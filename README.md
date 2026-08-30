@@ -1,12 +1,12 @@
-1-Bit-Full-Subtractor
-Introduction
+# 1-Bit-Full-Subtractor
+## Introduction
 This project presents the design and implementation of a 1-bit full subtractor using SystemVerilog. A full subtractor is a combinational logic circuit that computes the difference of two single-bit binary numbers while also accounting for a borrow-in from a previous (less significant) stage, producing both a difference bit and a borrow-out bit. The objective of this project is to develop the full subtractor structurally, by instantiating two half-subtractor modules and combining their outputs with a single OR gate, rather than implementing the logic behaviorally from a truth table. SystemVerilog is employed for the implementation, and a self-checking testbench is developed to validate the design against all eight possible input combinations. In conclusion, the full subtractor correctly reproduces the expected difference and borrow-out for every input combination, demonstrating how a full subtractor can be systematically built from two half-subtractor building blocks.
 
-What is a Full Subtractor
+# What is a Full Subtractor
 A full subtractor is a combinational digital circuit that subtracts one 1-bit binary number from another while also taking into account a borrow bit from a previous subtraction stage. This makes it different from a half-subtractor, which can only handle two inputs and cannot accept a borrow-in, making it unsuitable for chaining together to build multi-bit subtractors. A full subtractor is a fundamental building block used in ALUs (Arithmetic Logic Units), multi-bit subtractor circuits, and digital signal processing datapaths. The full subtractor implemented in this project produces a difference output (diff) and a borrow-out (bout) for the three inputs: minuend (a), subtrahend (b), and borrow-in (bin).
 
-Design and Implementation
-Full Subtractor Architecture
+## Design and Implementation
+### Full Subtractor Architecture
 The full subtractor is implemented structurally, using two instances of a half-subtractor module along with a single 2-input OR gate:
 
 Half-Subtractor 1 — computes an intermediate difference (a − b) and an intermediate borrow, using inputs a and b
